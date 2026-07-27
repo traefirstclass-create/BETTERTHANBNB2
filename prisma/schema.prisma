@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+
+model Purchase {
+  id                      String         @id @default(cuid())
+  email                   String         @unique
+  clerkUserId             String?        @unique
+  stripeCustomerId        String?
+  stripeCheckoutSessionId String         @unique
+  stripePaymentIntentId   String?
+  amountTotal             Int
+  currency                String         @default("usd")
+  status                  PurchaseStatus @default(COMPLETED)
+  createdAt               DateTime       @default(now())
+  updatedAt               DateTime       @updatedAt
+
+  moduleProgress ModuleProgress[]
+}
+
+enum PurchaseStatus {
+  PENDING
+  COMPLETED
+  REFUNDED
+}
+
+model ModuleProgress {
+  id          String    @id @default(cuid())
+  purchaseId  String
+  purchase    Purchase  @relation(fields: [purchaseId], references: [id])
+  moduleId    Int
+  completed   Boolean   @default(false)
+  completedAt DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([purchaseId, moduleId])
+}
