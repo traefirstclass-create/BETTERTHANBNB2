@@ -1,9 +1,14 @@
 import Link from "next/link";
 import { Show, SignInButton, UserButton } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
+import { isAdminEmail } from "@/lib/admin";
 
-export function Header() {
+export async function Header() {
+  const user = await currentUser();
+  const isAdmin = isAdminEmail(user?.primaryEmailAddress?.emailAddress);
+
   return (
     <header className="sticky top-0 z-40 border-b border-cream/10 bg-ink/90 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
@@ -23,6 +28,14 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-4">
           <Show when="signed-in">
+            {isAdmin && (
+              <Link
+                href="/admin"
+                className="text-sm font-medium text-cream/80 hover:text-cream"
+              >
+                Admin
+              </Link>
+            )}
             <Link
               href="/portal"
               className="text-sm font-medium text-cream/80 hover:text-cream"
