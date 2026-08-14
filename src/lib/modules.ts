@@ -49,7 +49,7 @@ export const MODULES: CourseModule[] = [
     id: 5,
     title: "Listings That Convert",
     description:
-      "Photography, titles, descriptions, and pricing strategy that turn browsers into bookings on Airbnb and beyond.",
+      "Photography, titles, descriptions, and pricing strategy that turn browsers into paying guests.",
     duration: "36 min",
     videoSource: { provider: "placeholder", title: "Listings That Convert" },
   },
