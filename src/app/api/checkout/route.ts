@@ -17,14 +17,22 @@ export async function POST() {
   const user = userId ? await currentUser() : null;
   const email = user?.primaryEmailAddress?.emailAddress;
 
-  const session = await getStripe().checkout.sessions.create({
-    mode: "payment",
-    line_items: [{ price: priceId, quantity: 1 }],
-    customer_email: email,
-    metadata: userId ? { clerkUserId: userId } : undefined,
-    success_url: `${appUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${appUrl}/#pricing`,
-  });
+  try {
+    const session = await getStripe().checkout.sessions.create({
+      mode: "payment",
+      line_items: [{ price: priceId, quantity: 1 }],
+      customer_email: email,
+      metadata: userId ? { clerkUserId: userId } : undefined,
+      success_url: `${appUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${appUrl}/#pricing`,
+    });
 
-  return NextResponse.json({ url: session.url });
+    return NextResponse.json({ url: session.url });
+  } catch (err) {
+    console.error("Checkout session creation failed", err);
+    return NextResponse.json(
+      { error: err instanceof Error ? err.message : "Checkout failed" },
+      { status: 500 }
+    );
+  }
 }
