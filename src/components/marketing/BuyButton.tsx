@@ -32,7 +32,7 @@ export function BuyButton({ className = "" }: { className?: string }) {
         className={`inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient px-8 py-4 font-semibold text-ink shadow-lg shadow-gold/20 transition hover:brightness-110 disabled:opacity-70 ${className}`}
       >
         {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-        {loading ? "Redirecting to checkout…" : "Enroll Now for $997"}
+        {loading ? "Redirecting to checkout…" : "Enroll Now for $497"}
       </button>
       {error && <p className="text-sm text-red-400">{error}</p>}
     </div>

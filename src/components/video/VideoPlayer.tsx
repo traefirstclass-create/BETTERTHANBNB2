@@ -16,6 +16,18 @@ export function VideoPlayer({ source }: { source: VideoSource }) {
           </p>
         </div>
       );
+    case "youtube":
+      return (
+        <div className="aspect-video w-full overflow-hidden rounded-xl border border-gold/20 bg-ink-soft">
+          <iframe
+            className="h-full w-full"
+            src={`https://www.youtube-nocookie.com/embed/${source.videoId}`}
+            title="Course video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      );
     default:
       return (
         <div className="flex aspect-video w-full items-center justify-center rounded-xl border border-gold/20 bg-ink-soft text-cream/60">

@@ -1,5 +1,6 @@
 export type VideoSource =
   | { provider: "placeholder"; title: string }
+  | { provider: "youtube"; videoId: string }
   | { provider: "mux"; playbackId: string }
   | { provider: "cloudflare-stream"; videoId: string; accountId: string }
   | { provider: "vimeo"; videoId: string };
@@ -15,67 +16,67 @@ export type CourseModule = {
 export const MODULES: CourseModule[] = [
   {
     id: 1,
-    title: "The Arbitrage Model, Demystified",
+    title: "The Partnership Model, Not a Lease",
     description:
-      "How rental arbitrage actually works, why it beats buying property to start, and the exact math Rasheen uses to know a deal is worth signing.",
-    duration: "38 min",
-    videoSource: { provider: "placeholder", title: "The Arbitrage Model, Demystified" },
+      "Why Rasheen structures deals as a partnership with a monthly return to the property owner instead of signing a traditional lease, and why that framing changes how owners respond.",
+    duration: "15 min",
+    videoSource: { provider: "placeholder", title: "The Partnership Model, Not a Lease" },
   },
   {
     id: 2,
-    title: "Finding Markets That Actually Cash Flow",
+    title: "Running the Numbers Before You Commit",
     description:
-      "A repeatable process for scoring cities and neighborhoods on demand, regulation risk, and seasonality before you ever contact a landlord.",
-    duration: "45 min",
-    videoSource: { provider: "placeholder", title: "Finding Markets That Actually Cash Flow" },
+      "The exact math Rasheen runs on a property before agreeing to anything: what the owner needs, what cash rentals can realistically bring in, and how to know a deal covers itself.",
+    duration: "18 min",
+    videoSource: { provider: "placeholder", title: "Running the Numbers Before You Commit" },
   },
   {
     id: 3,
-    title: "Landing Landlord Approval",
+    title: "Finding and Approaching Property Owners",
     description:
-      "The pitch, paperwork, and objection-handling scripts Rasheen uses to get sublease approval, even in buildings that say no to short-term rentals.",
-    duration: "41 min",
-    videoSource: { provider: "placeholder", title: "Landing Landlord Approval" },
+      "Where to find owners open to a partnership, the pitch Rasheen uses, and how to structure the split so both sides want the deal to work.",
+    duration: "20 min",
+    videoSource: { provider: "placeholder", title: "Finding and Approaching Property Owners" },
   },
   {
     id: 4,
-    title: "Furnishing on a Budget That Still Books",
+    title: "Furnishing for Almost Nothing",
     description:
-      "How to furnish a unit for a fraction of what most hosts spend, without it looking cheap in photos or reviews.",
-    duration: "33 min",
-    videoSource: { provider: "placeholder", title: "Furnishing on a Budget That Still Books" },
+      "How Rasheen furnishes a full unit for a fraction of retail, using free and deeply discounted furniture sources, without it looking cheap to guests.",
+    duration: "16 min",
+    videoSource: { provider: "placeholder", title: "Furnishing for Almost Nothing" },
   },
   {
     id: 5,
-    title: "Listings That Convert",
+    title: "Cash Rentals Without Airbnb",
     description:
-      "Photography, titles, descriptions, and pricing strategy that turn browsers into paying guests.",
-    duration: "36 min",
-    videoSource: { provider: "placeholder", title: "Listings That Convert" },
+      "Why Rasheen runs direct cash rentals instead of listing on Airbnb: no platform fees, no platform restrictions, and how weekly, daily, and nightly pricing works in this model.",
+    duration: "17 min",
+    videoSource: { provider: "placeholder", title: "Cash Rentals Without Airbnb" },
   },
   {
     id: 6,
-    title: "Systems, Cleaners, and Guest Communication",
+    title: "Marketing Through Local Pages and Direct Posts",
     description:
-      "The operating system behind running a unit remotely: cleaning turnovers, guest messaging, and the tools that keep it hands-off.",
-    duration: "40 min",
-    videoSource: { provider: "placeholder", title: "Systems, Cleaners, and Guest Communication" },
+      "How Rasheen fills units by posting directly to local community and social pages and DMs, targeting people already paying for extended-stay hotels, before spending a dollar on ads.",
+    duration: "19 min",
+    videoSource: { provider: "placeholder", title: "Marketing Through Local Pages and Direct Posts" },
   },
   {
     id: 7,
-    title: "Scaling Past Your First Unit",
+    title: "Testing Demand Before You Spend",
     description:
-      "When and how to add a second, third, and tenth unit, plus the cash-flow discipline that keeps a growing portfolio from collapsing.",
-    duration: "42 min",
-    videoSource: { provider: "placeholder", title: "Scaling Past Your First Unit" },
+      "How to post a coming-soon offer and build a waiting list before committing any money, so you know a unit will fill before you take on the partnership.",
+    duration: "14 min",
+    videoSource: { provider: "placeholder", title: "Testing Demand Before You Spend" },
   },
   {
     id: 8,
-    title: "Protecting the Business",
+    title: "Scaling to Your Second Unit and Beyond",
     description:
-      "Insurance, LLCs, local regulation changes, and the risk-management habits that keep your arbitrage business legal and durable.",
-    duration: "35 min",
-    videoSource: { provider: "placeholder", title: "Protecting the Business" },
+      "How Rasheen splits a property into multiple units so one side covers the return and the other is profit, plus what changes operationally once you're running more than one property.",
+    duration: "21 min",
+    videoSource: { provider: "placeholder", title: "Scaling to Your Second Unit and Beyond" },
   },
 ];
 

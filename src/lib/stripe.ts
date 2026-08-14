@@ -16,5 +16,3 @@ export function getStripe(): Stripe {
   }
   return cachedClient;
 }
-
-export const COURSE_PRICE_USD = 997;

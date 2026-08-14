@@ -2,8 +2,12 @@ import { Container } from "@/components/ui/Container";
 
 const FAQS = [
   {
-    q: "Do I need to already own or lease a rental property?",
-    a: "No. The course teaches the arbitrage model from the beginning, including how to find and get approved for a lease you can sublease as a short-term rental.",
+    q: "Do I need to already own a property?",
+    a: "No. You'll learn Rasheen's exact partnership model: how to structure a deal with a property owner from scratch. No purchase required.",
+  },
+  {
+    q: "Is this just another Airbnb hosting course?",
+    a: "No. This isn't about listing on Airbnb. You'll learn Rasheen's direct cash-rental model: partnering with property owners and renting straight to guests, without Airbnb's fees or restrictions.",
   },
   {
     q: "Is this self-paced?",
@@ -15,7 +19,7 @@ const FAQS = [
   },
   {
     q: "What if short-term rentals aren't allowed where I live?",
-    a: "Module 2 covers how to evaluate a market's regulations before you commit, and Module 8 covers staying compliant as rules change.",
+    a: "Because this model runs on direct property-owner partnerships and cash rentals instead of Airbnb listings, it sidesteps a lot of platform-specific restrictions. Module 5 covers how that works in practice.",
   },
 ];
 

@@ -6,16 +6,16 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(217,164,65,0.14),_transparent_60%)]" />
       <div className="relative mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
         <p className="mb-5 rounded-full border border-gold/30 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold-light">
-          Taught by Rasheen Castell, Owner of 813BNB
+          Taught by Rasheen Castell, Built and Proven in Tampa, FL
         </p>
         <h1 className="font-display text-4xl font-bold leading-tight sm:text-6xl">
-          Turn One Lease Into a{" "}
-          <span className="text-gold-gradient">Short-Term Rental Business</span>
+          Build a Short-Term Rental Business{" "}
+          <span className="text-gold-gradient">Without Buying Property</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-cream/70 sm:text-xl">
-          Better Than BNB is the step-by-step arbitrage system Rasheen used to
-          go from a single sublease to a growing portfolio, without buying
-          any real estate.
+          Better Than BNB is Rasheen&rsquo;s complete system: partner with
+          property owners, furnish the unit, fill it with paying guests, and
+          scale, skipping Airbnb&rsquo;s fees and restrictions entirely.
         </p>
         <div className="mt-10">
           <BuyButton />

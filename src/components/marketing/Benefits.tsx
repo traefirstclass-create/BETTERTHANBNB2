@@ -6,19 +6,19 @@ const BENEFITS = [
     icon: Key,
     title: "No property purchase required",
     description:
-      "Start with a leased unit instead of a mortgage: lower upfront cost, faster first booking.",
+      "Partner with property owners instead of buying real estate: lower upfront cost, faster first booking.",
   },
   {
     icon: MessagesSquare,
-    title: "Real scripts, not theory",
+    title: "Real partnership scripts, not theory",
     description:
-      "The exact landlord pitches, listing copy, and guest-communication templates Rasheen uses today.",
+      "The exact property-owner pitches, marketing posts, and guest-communication templates Rasheen uses today.",
   },
   {
     icon: Building2,
-    title: "Built from an operating business",
+    title: "Skip Airbnb's fees and rules",
     description:
-      "Every module comes from running 813BNB, not from someone who only teaches the model.",
+      "Learn the direct cash-rental model Rasheen runs instead, built from operating 813BNB, not theory.",
   },
   {
     icon: TrendingUp,

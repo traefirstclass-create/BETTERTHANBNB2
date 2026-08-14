@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Better Than BNB | Short-Term Rental Arbitrage Course by Rasheen Castell",
+  title: "Better Than BNB | Build a Short-Term Rental Business by Rasheen Castell",
   description:
-    "Learn the exact short-term rental arbitrage system Rasheen Castell used to build 813BNB: an 8-module course covering markets, landlord approvals, furnishing, listings, systems, and scaling.",
+    "Learn the exact system Rasheen Castell used to build 813BNB: an 8-module course on partnering with property owners, furnishing units, filling them with paying guests, and scaling, without buying property or relying on Airbnb.",
 };
 
 export default function RootLayout({

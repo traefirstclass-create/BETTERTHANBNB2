@@ -14,12 +14,14 @@ export function InstructorBio() {
               Rasheen Castell
             </h2>
             <p className="mt-4 text-cream/70">
-              Rasheen Castell is the owner of 813BNB, a short-term rental
-              arbitrage business built without owning a single property.
-              After learning the model firsthand (landlord conversations,
-              furnishing on a budget, and the systems to run units remotely),
-              Rasheen turned that operating playbook into Better Than BNB, so
-              other operators can skip the trial and error.
+              Rasheen Castell is the owner of 813BNB, a Tampa-built
+              short-term rental business run on property-owner partnerships
+              instead of purchases, and direct cash rentals instead of
+              Airbnb. After learning the model firsthand (owner
+              conversations, furnishing on a budget, and the systems to run
+              units remotely), Rasheen turned that operating playbook into
+              Better Than BNB, so other operators can skip the trial and
+              error, in any city.
             </p>
           </div>
         </div>

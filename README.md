@@ -29,7 +29,7 @@ Landing page, checkout, and student portal for **Better Than BNB**, a short-term
 See [`.env.example`](./.env.example). You'll need:
 
 - A **Clerk** app (test/dev instance for local development).
-- A **Stripe** account with a one-time $997 Price created for the course, plus a webhook endpoint.
+- A **Stripe** account with a one-time $497 Price created for the course, plus a webhook endpoint.
 - A **Postgres** database (e.g. Vercel Postgres / Neon). `DATABASE_URL` is the pooled connection used at runtime; `DIRECT_URL` is the direct connection used only for running migrations.
 
 ## Testing the checkout + webhook flow locally
