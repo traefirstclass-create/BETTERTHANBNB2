@@ -6,7 +6,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(217,164,65,0.14),_transparent_60%)]" />
       <div className="relative mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
         <p className="mb-5 rounded-full border border-gold/30 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold-light">
-          Taught by Rasheen Castale, Owner of 813BNB
+          Taught by Rasheen Castell, Owner of 813BNB
         </p>
         <h1 className="font-display text-4xl font-bold leading-tight sm:text-6xl">
           Turn One Lease Into a{" "}

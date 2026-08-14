@@ -11,10 +11,10 @@ export function InstructorBio() {
               Your Instructor
             </p>
             <h2 className="mt-2 font-display text-2xl font-bold sm:text-3xl">
-              Rasheen Castale
+              Rasheen Castell
             </h2>
             <p className="mt-4 text-cream/70">
-              Rasheen Castale is the owner of 813BNB, a short-term rental
+              Rasheen Castell is the owner of 813BNB, a short-term rental
               arbitrage business built without owning a single property.
               After learning the model firsthand — landlord conversations,
               furnishing on a budget, and the systems to run units remotely —

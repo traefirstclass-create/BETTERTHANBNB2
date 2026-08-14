@@ -1,6 +1,6 @@
 # Better Than BNB
 
-Landing page, checkout, and student portal for **Better Than BNB** — a short-term rental arbitrage course by Rasheen Castale (owner of 813BNB).
+Landing page, checkout, and student portal for **Better Than BNB** — a short-term rental arbitrage course by Rasheen Castell (owner of 813BNB).
 
 - **Framework:** Next.js (App Router, TypeScript, Tailwind CSS)
 - **Auth:** [Clerk](https://clerk.com)
