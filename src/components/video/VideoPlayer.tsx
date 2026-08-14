@@ -21,7 +21,7 @@ export function VideoPlayer({ source }: { source: VideoSource }) {
         <div className="aspect-video w-full overflow-hidden rounded-xl border border-gold/20 bg-ink-soft">
           <iframe
             className="h-full w-full"
-            src={`https://www.youtube-nocookie.com/embed/${source.videoId}`}
+            src={`https://www.youtube-nocookie.com/embed/${source.videoId}?rel=0`}
             title="Course video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
