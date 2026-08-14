@@ -4,10 +4,29 @@ import { MODULES } from "@/lib/modules";
 import type { PurchaseStatus } from "@prisma/client";
 
 export default async function AdminPage() {
-  const purchases = await prisma.purchase.findMany({
-    orderBy: { createdAt: "desc" },
-    include: { moduleProgress: true },
-  });
+  let purchases;
+  try {
+    purchases = await prisma.purchase.findMany({
+      orderBy: { createdAt: "desc" },
+      include: { moduleProgress: true },
+    });
+  } catch (err) {
+    return (
+      <div className="py-16">
+        <Container>
+          <h1 className="font-display text-3xl font-bold sm:text-4xl">
+            Admin page error
+          </h1>
+          <p className="mt-2 text-cream/60">
+            The purchases query failed. Copy the details below back to Claude.
+          </p>
+          <pre className="mt-6 overflow-x-auto whitespace-pre-wrap rounded-xl border border-red-500/30 bg-ink-soft p-4 text-xs text-red-300">
+            {err instanceof Error ? `${err.name}: ${err.message}\n\n${err.stack}` : String(err)}
+          </pre>
+        </Container>
+      </div>
+    );
+  }
 
   return (
     <div className="py-16">
