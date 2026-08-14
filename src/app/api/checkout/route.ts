@@ -3,21 +3,21 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 import { getStripe } from "@/lib/stripe";
 
 export async function POST() {
-  const priceId = process.env.STRIPE_PRICE_ID;
-  if (!priceId) {
-    return NextResponse.json(
-      { error: "Checkout is not configured yet." },
-      { status: 500 }
-    );
-  }
-
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-
-  const { userId } = await auth();
-  const user = userId ? await currentUser() : null;
-  const email = user?.primaryEmailAddress?.emailAddress;
-
   try {
+    const priceId = process.env.STRIPE_PRICE_ID;
+    if (!priceId) {
+      return NextResponse.json(
+        { error: "Checkout is not configured yet." },
+        { status: 500 }
+      );
+    }
+
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+
+    const { userId } = await auth();
+    const user = userId ? await currentUser() : null;
+    const email = user?.primaryEmailAddress?.emailAddress;
+
     const session = await getStripe().checkout.sessions.create({
       mode: "payment",
       line_items: [{ price: priceId, quantity: 1 }],
@@ -31,7 +31,12 @@ export async function POST() {
   } catch (err) {
     console.error("Checkout session creation failed", err);
     return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Checkout failed" },
+      {
+        error:
+          err instanceof Error
+            ? `${err.name}: ${err.message}`
+            : String(err),
+      },
       { status: 500 }
     );
   }
