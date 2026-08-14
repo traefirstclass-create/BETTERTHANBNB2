@@ -14,7 +14,7 @@ export function Hero() {
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-cream/70 sm:text-xl">
           Better Than BNB is the step-by-step arbitrage system Rasheen used to
-          go from a single sublease to a growing portfolio — without buying
+          go from a single sublease to a growing portfolio, without buying
           any real estate.
         </p>
         <div className="mt-10">

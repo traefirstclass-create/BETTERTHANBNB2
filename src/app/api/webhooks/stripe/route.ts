@@ -27,7 +27,7 @@ export async function POST(req: Request) {
     try {
       await handleCheckoutCompleted(session);
     } catch (err) {
-      // Log and still return 200 — Stripe retries on non-2xx, and entitlement
+      // Log and still return 200. Stripe retries on non-2xx, and entitlement
       // lookup self-heals by email on the buyer's next portal visit.
       console.error("Failed to record purchase from webhook", err);
     }

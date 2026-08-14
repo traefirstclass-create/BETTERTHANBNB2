@@ -7,8 +7,8 @@ export type PurchaseWithProgress = Purchase & { moduleProgress: ModuleProgress[]
 /**
  * Resolves purchase access for the signed-in Clerk user. Looks up by
  * clerkUserId first (the fast path once linked), then falls back to the
- * account's primary email — covering buyers who paid before creating an
- * account — and lazily backfills clerkUserId on that row when it matches.
+ * account's primary email (covering buyers who paid before creating an
+ * account), and lazily backfills clerkUserId on that row when it matches.
  */
 export async function getEntitlementForCurrentUser(): Promise<PurchaseWithProgress | null> {
   const { userId } = await auth();

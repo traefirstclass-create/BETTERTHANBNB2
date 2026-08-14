@@ -33,7 +33,7 @@ export const MODULES: CourseModule[] = [
     id: 3,
     title: "Landing Landlord Approval",
     description:
-      "The pitch, paperwork, and objection-handling scripts Rasheen uses to get sublease approval — even in buildings that say no to short-term rentals.",
+      "The pitch, paperwork, and objection-handling scripts Rasheen uses to get sublease approval, even in buildings that say no to short-term rentals.",
     duration: "41 min",
     videoSource: { provider: "placeholder", title: "Landing Landlord Approval" },
   },
@@ -57,7 +57,7 @@ export const MODULES: CourseModule[] = [
     id: 6,
     title: "Systems, Cleaners, and Guest Communication",
     description:
-      "The operating system behind running a unit remotely — cleaning turnovers, guest messaging, and the tools that keep it hands-off.",
+      "The operating system behind running a unit remotely: cleaning turnovers, guest messaging, and the tools that keep it hands-off.",
     duration: "40 min",
     videoSource: { provider: "placeholder", title: "Systems, Cleaners, and Guest Communication" },
   },
@@ -65,7 +65,7 @@ export const MODULES: CourseModule[] = [
     id: 7,
     title: "Scaling Past Your First Unit",
     description:
-      "When and how to add a second, third, and tenth unit — plus the cash-flow discipline that keeps a growing portfolio from collapsing.",
+      "When and how to add a second, third, and tenth unit, plus the cash-flow discipline that keeps a growing portfolio from collapsing.",
     duration: "42 min",
     videoSource: { provider: "placeholder", title: "Scaling Past Your First Unit" },
   },

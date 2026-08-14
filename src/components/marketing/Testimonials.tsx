@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 const PLACEHOLDER_SLOTS = [1, 2, 3];
 
 /**
- * Structural placeholder only — swap these three slots for real student
+ * Structural placeholder only. Swap these three slots for real student
  * quotes/names before launch. Left visibly marked as placeholders rather
  * than filled with invented reviews.
  */
@@ -26,7 +26,7 @@ export function Testimonials() {
               className="rounded-2xl border border-dashed border-cream/20 bg-ink-soft/60 p-6 text-sm text-cream/40"
             >
               <p>
-                Testimonial placeholder #{slot} — replace with a real
+                Testimonial placeholder #{slot}. Replace with a real
                 student quote and name before this page goes live.
               </p>
             </div>

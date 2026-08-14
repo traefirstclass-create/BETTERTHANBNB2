@@ -6,7 +6,7 @@ const BENEFITS = [
     icon: Key,
     title: "No property purchase required",
     description:
-      "Start with a leased unit instead of a mortgage — lower upfront cost, faster first booking.",
+      "Start with a leased unit instead of a mortgage: lower upfront cost, faster first booking.",
   },
   {
     icon: MessagesSquare,

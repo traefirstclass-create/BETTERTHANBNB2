@@ -23,7 +23,7 @@ export default async function PortalLayout({ children }: { children: ReactNode }
           <p className="mt-3 text-sm text-cream/60">
             We don&rsquo;t see a completed Better Than BNB purchase linked to
             this account yet. If you just paid, this can take a minute to
-            sync — otherwise, enroll below.
+            sync. Otherwise, enroll below.
           </p>
           <Link
             href="/#pricing"

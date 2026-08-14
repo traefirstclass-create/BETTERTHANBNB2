@@ -1,12 +1,12 @@
 # Better Than BNB
 
-Landing page, checkout, and student portal for **Better Than BNB** — a short-term rental arbitrage course by Rasheen Castell (owner of 813BNB).
+Landing page, checkout, and student portal for **Better Than BNB**, a short-term rental arbitrage course by Rasheen Castell (owner of 813BNB).
 
 - **Framework:** Next.js (App Router, TypeScript, Tailwind CSS)
 - **Auth:** [Clerk](https://clerk.com)
 - **Payments:** [Stripe Checkout](https://stripe.com) (one-time payment)
-- **Database:** Postgres via [Prisma](https://www.prisma.io) — stores purchase/entitlement records and per-module progress. Clerk owns user identity; there is no local `User` table.
-- **Video:** placeholder player for now (`src/components/video/VideoPlayer.tsx`) — swap in a real provider (Mux, Cloudflare Stream, Vimeo) later without restructuring routes or the schema.
+- **Database:** Postgres via [Prisma](https://www.prisma.io): stores purchase/entitlement records and per-module progress. Clerk owns user identity; there is no local `User` table.
+- **Video:** placeholder player for now (`src/components/video/VideoPlayer.tsx`); swap in a real provider (Mux, Cloudflare Stream, Vimeo) later without restructuring routes or the schema.
 
 ## Getting Started
 
@@ -43,4 +43,4 @@ Copy the printed `whsec_...` into `STRIPE_WEBHOOK_SECRET` in `.env.local`, then 
 ## Deployment (Vercel)
 
 - Add all env vars from `.env.example` to the Vercel project (per environment).
-- Add a second Stripe webhook endpoint in the Stripe Dashboard pointing at `https://<your-domain>/api/webhooks/stripe`, and use that endpoint's own signing secret in production — it's different from the `stripe listen` secret used locally.
+- Add a second Stripe webhook endpoint in the Stripe Dashboard pointing at `https://<your-domain>/api/webhooks/stripe`, and use that endpoint's own signing secret in production; it's different from the `stripe listen` secret used locally.

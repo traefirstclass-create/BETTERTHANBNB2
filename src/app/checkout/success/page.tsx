@@ -60,8 +60,8 @@ export default async function CheckoutSuccessPage({
       heading="Payment received"
       body={
         hasAccount
-          ? "We found an account with this email — sign in to access your course."
-          : "One more step — create your account to access the course."
+          ? "We found an account with this email. Sign in to access your course."
+          : "One more step: create your account to access the course."
       }
       cta={{
         href: hasAccount
